@@ -36,7 +36,7 @@ function rockPaperScissors(hand1, hand2) {
     }
 
       else (hand1 === 'paper' && hand2 === 'scissors') 
-      return "Hand two wins!";
+      return "Hand two wins! hello";
     }
 
 function getPrompt() {
