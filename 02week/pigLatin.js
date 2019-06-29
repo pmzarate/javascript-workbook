@@ -29,36 +29,6 @@ function pigLatin(word){
       }
     }
 
-  // Your code 
-  //var word= "trish"
-  // function pigLatin(word) {
- // 
-//var word = word.split("");
- // console.log (word);
-
- // var word ="abcd";
-   // for(i=0; i<s. length;i++){
-    //        char c=s. charAt(i);
-      //  console.log(c);
-
-
-  //var vowelRegex = word.match(/[aeiou]/ig);
-  //  if (vowelRegex.test(letter[0])) {
-  //  return letters.join("")+"yay";
- // }
- // }
-  //while(true) {
-   // if(!vowelRegex.test (letters[0])){
-   //   letters.push(letter.splice(0,1));
-  //  }
-  //  else break;
- // }
-  //word=letters.join("")+"ay";
-  //  return word;
-  
-
-
-
 function getPrompt() {
   rl.question('word ', (answer) => {
     console.log( pigLatin(answer) );
