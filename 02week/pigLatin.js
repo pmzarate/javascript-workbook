@@ -7,13 +7,14 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+
 var vowels = ['a','e','i','o','u'];
 var wordArray = [];
 var pigLatinWord = '';
 
 //check if word is valid
 function checkWord(word) {
-  if (typeof word==='string') {
+  if (typeof word ==='string') {
     return word.trim().toLowerCase();
   }
 }
