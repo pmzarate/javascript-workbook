@@ -24,30 +24,30 @@ function printBoard() {
 }
 
 function horizontalWin() {
-  if ((board[0][0] && board[0][1] && board[0][2]) ||
-  (board[1][0] && board[1][1] && board[1][2]) ||
-  (board[2][0] && board[2][1] && board[2][2])) {
+  if ((board[0][0] === playerTurn && board[0][1] === playerTurn && board[0][2]=== playerTurn) ||
+  (board[1][0]=== playerTurn && board[1][1]===playerTurn && board[1][2] === playerTurn) ||
+  (board[2][0]=== playerTurn && board[2][1]===playerTurn && board[2][2]=== playerTurn)) {
     return true
   }
 }
 
 function verticalWin() {
-  if ((board[0][0] && board[1][0] && board[2][0]) ||
-    (board[0][1] && board[1][1] && board[2][1]) ||
-    (board[0][2] && board[1][2] && board[2][2])) {
+  if ((board[0][0]=== playerTurn && board[1][0] ===playerTurn && board[2][0]=== playerTurn) ||
+    (board[0][1]=== playerTurn && board[1][1]=== playerTurn && board[2][1]===playerTurn) ||
+    (board[0][2]=== playerTurn && board[1][2]=== playerTurn && board[2][2])===playerTurn) {
       return true
     }
 }
 
 function diagonalWin() {
-  if ((board[0][0] && board[1][1] && board [2][2]) ||
-    (board[2][0] && board[1][1] && board[0][2])){
+  if ((board[0][0]=== playerTurn && board[1][1] === playerTurn && board [2][2]=== playerTurn) ||
+    (board[2][0] === playerTurn && board[1][1 === playerTurn] && board[0][2] === playerTurn)){
       return true
     }
 }
 
 function checkForWin() {
-  if (horizontalWin(),true || verticalWin(),true || diagonalWin(),true) {
+  if (horizontalWin() || verticalWin() || diagonalWin()) {
     return true
   } else {
     console.log("it's a tie")
@@ -93,8 +93,6 @@ function emptySpace(row,column) {
     return true
   }
 }
-
-
 
 
 
