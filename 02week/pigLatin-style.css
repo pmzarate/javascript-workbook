@@ -1,0 +1,41 @@
+body {
+    width:auto;
+    height: auto;
+    background-color: rgb(169,189,248);
+}
+
+/*font-family: 'Rum Raisin', sans-serif;
+font-family: 'Emilys Candy', cursive;
+font-family: 'Princess Sofia', cursive;*/
+
+.header-container {
+    height: 400px;
+}
+
+header>h1 {
+    background-color: powderblue;
+    font-size: 120px;
+    font-family: 'Emilys Candy', cursive;
+    color: rgb(251,207,207);
+    text-align: center;
+    text-shadow:5px 5px 10px red, 10px 10px 20px yellow, 15px 15px 30px blue;
+    padding-bottom: -200px;
+}
+
+header>h2 {
+    background-color: greenyellow;
+    font-size: 60px;
+    font-family: 'Emilys Candy', cursive;
+    color: rgb(251,207,207);
+    text-align: center;
+    text-shadow:5px 5px 10px red, 10px 10px 20px yellow, 15px 15px 30px blue;
+}
+
+.container>form {
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    font-family: 'Rum Raisin', sans-serif;
+    font-size: 40px;
+}

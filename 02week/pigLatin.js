@@ -5,9 +5,8 @@ const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
-});
-
-
+});;
+// var word="stop";
 var vowels = ['a','e','i','o','u'];
 var wordArray = [];
 var pigLatinWord = '';
@@ -21,15 +20,16 @@ function checkWord(word) {
 
 //check 1st letter for vowels
 function check1stLetter (word) {
-  return vowels.includes(word[0])
+    return vowels.includes(word[0])
 }
 
 //convert word to pig latin
 function pigLatin(word) {
   let newWord = checkWord(word);
+  wordArray = [];
     if (check1stLetter(newWord)) {
       return newWord + 'yay'
-    } else {
+      } else {
       for ( let i = 0; i < newWord.length; i++ ) {
         if (vowels.includes(newWord[i])) {
       return pigLatinWord + wordArray.join('') + 'ay' ;  
@@ -41,13 +41,11 @@ function pigLatin(word) {
     }
 }
 
-
-  
-
-
 function getPrompt() {
   rl.question('word ', (answer) => {
     console.log( pigLatin(answer) );
+   // console.log(pigLatinWord);
+   // console.log(wordArray);
     getPrompt();
   });
 }
