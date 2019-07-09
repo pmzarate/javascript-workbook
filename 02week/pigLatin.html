@@ -11,23 +11,26 @@
 <body>
     <div class="header-container">
         <header>
-            <h1>Pig Latin</h1> <br/>
+            <h1>Pig Latin</h1> 
             <h2>Convert-A-Word</h2>
         </header>
-            <img src="../02week/images/—Pngtree—cute pig small wings flying_3960440.png;" alt id="flying pg"  width="200px" height="200px;">
-    </div>
-        <div class = "container">
-                <div>
-                    Type A Word:<br/><input id="inWord" type="text" name="word" value='' style ="width: 350px; height: 100px; font-size: 30px; padding-left: 10px;font-family: 'Rum Raisin', sans-serif; justify-content: center;">
-                </div>
-                    <br>
-                <div>
-                    Translated Word: <br/><output id="outWord" type="text" name="pigLatinWord"
-                    style ="width: 350px; height: 100px; font-size: 30px; padding-left: 10px; font-family: 'Rum Raisin', sans-serif; justify-content: center; ">
-                </div>
-                    <br>
-            <button onclick="test()">Run</button>
+        <div>
+            <img src="../02week/images/—Pngtree—cute pig small wings flying_3960440.png" alt id="flyingpg">
         </div>
+        
+    </div>
+        <div class = "container-span">
+                <div>
+                    Type A Word:<br/><input id="inWord" type="text" name="word" value='' style ="width: 350px; height: 100px; font-size: 40px; padding-left: 10px;font-family: 'Rum Raisin', sans-serif; justify-content: center;">
+                </div>
+                <div>
+                    <button onclick="test()"><b>Translate</b></button>
+                </div> 
+                <h2>Translated Word:</h2>  
+                <div class="transWord">
+                    <br/><output id ="outWord" type ="text" name ="pigLatinWord" value='' ></output>        
+                </div>
+            </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="pigLatinGUI.js"></script>
 </body>
