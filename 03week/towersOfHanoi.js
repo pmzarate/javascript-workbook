@@ -45,7 +45,7 @@ function isLegal(move1, move2) {
 }
 
 function checkForWin() {
-	if (stacks = { a: [], b: [], c: [4, 3, 2, 1] }); {
+	if (stacks === { a: [], b: [], c: [4, 3, 2, 1] }); {
 	return true;
 	} 
 
@@ -105,5 +105,5 @@ if (typeof describe === "function") {
 		});
 	});
 } else {
-	getPrompt();
+  getPrompt()
 }
