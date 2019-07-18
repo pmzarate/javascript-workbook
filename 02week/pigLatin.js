@@ -5,33 +5,47 @@ const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
-});
+});;
+// var word="stop";
+var vowels = ['a','e','i','o','u'];
+var wordArray = [];
+var pigLatinWord = '';
 
-'use strict'
+//check if word is valid
+function checkWord(word) {
+  if (typeof word ==='string') {
+    return word.trim().toLowerCase();
+  }
+}
 
-function pigLatin(word){
-  word = word.trim().toLowerCase();
-  var letters = word.split('');
-  var vowels = ['a','e','i','o','u'];
-  var newWord = '';
-    for(var i = 0; i < vowels.length-1; n++) {
-      for (var y=0; y< word.length-1; y++) {
-        if (word[y] === vowels[i]){
-          for (var x=y; x< word.length; x++){
-            newWord = newWord + word[x];
-          }
-        for(var n = 0; n < y; n++) {
-            newWord = newWord + word[n];
-          }
-        return newWord + 'yay";'
-          }
+//check 1st letter for vowels
+function check1stLetter (word) {
+    return vowels.includes(word[0])
+}
+
+//convert word to pig latin
+function pigLatin(word) {
+  let newWord = checkWord(word);
+  wordArray = [];
+    if (check1stLetter(newWord)) {
+      return newWord + 'yay'
+      } else {
+      for ( let i = 0; i < newWord.length; i++ ) {
+        if (vowels.includes(newWord[i])) {
+      return pigLatinWord + wordArray.join('') + 'ay' ;  
+        } else {
+          wordArray.push(newWord[i]);
+          pigLatinWord= newWord.slice(i+1);
         }
       }
     }
+}
 
 function getPrompt() {
   rl.question('word ', (answer) => {
     console.log( pigLatin(answer) );
+   // console.log(pigLatinWord);
+   // console.log(wordArray);
     getPrompt();
   });
 }

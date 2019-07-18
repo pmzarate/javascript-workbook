@@ -1,0 +1,95 @@
+body {
+    width:auto;
+    height: auto;
+    background-color: rgb(169,189,248);
+}
+
+/*font-family: 'Rum Raisin', sans-serif;
+font-family: 'Emilys Candy', cursive;
+font-family: 'Princess Sofia', cursive;*/
+
+.header-container {
+    height: 400px;
+    line-height: 35px;
+    display: flex;
+    margin-left: 180px;
+    margin-top: 140px;
+
+}
+
+#flyingpg {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    width: 650px;
+    height: 700px;
+    margin-right: 120px;
+    transform: rotate(15deg);
+}
+
+header>h1 {
+    font-size: 150px;
+    font-family: 'Emilys Candy', cursive;
+    color:rgb(254,181,201);
+    text-align: inherit;
+    text-shadow:5px 5px 10px darkred,  10px 10px 20px lightskyblue, 15px 15px 30px navy;
+    letter-spacing: 8px;
+}
+
+header>h2 {
+    font-size: 80px;
+    font-family: 'Emilys Candy', cursive;
+    color:rgb(254,181,201);
+    text-align: center;
+    text-shadow:  5px 5px 10px darkred, 10px 10px 20px lightskyblue, 15px 15px 30px navy;
+    letter-spacing: 6px;
+}
+
+.container-span {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Rum Raisin', sans-serif;
+    font-size: 40px;
+    padding: 50px;
+}
+
+button {
+    width: 200px; 
+    height: 80px; 
+    font-size: 32px; 
+    background-color: rgb(254,181,201); font-family: 'Emilys Candy', cursive;
+    border-radius:  25px; 
+    letter-spacing: 2px;
+}
+
+.container-span>h2 {
+    display: flex;
+    position: absolute;
+    font-size: 40px;
+    padding-bottom: 160px;
+    margin-left: 440px;
+    font-weight: normal;
+}
+
+.transWord {
+    justify-content: left;
+    margin-top:50px;
+    width: 350px; 
+    height: 60px; 
+    padding-left: 10px; 
+    font-family: 'Rum Raisin', sans-serif;
+    background-color: white;
+    padding-bottom: 40px;
+}
+ output {
+     display: flex;
+ }
+output#outWord {
+    justify-content: flex-start;
+    text-align: center;
+    line-height: .5px;
+
+}
