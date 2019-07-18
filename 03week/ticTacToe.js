@@ -1,5 +1,5 @@
-'use strict';
 
+'use strict';
 const assert = require('assert');
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -24,24 +24,77 @@ function printBoard() {
 }
 
 function horizontalWin() {
-  // Your code here
+  if ((board[0][0] === playerTurn && board[0][1] === playerTurn && board[0][2]=== playerTurn) ||
+  (board[1][0]=== playerTurn && board[1][1]===playerTurn && board[1][2] === playerTurn) ||
+  (board[2][0]=== playerTurn && board[2][1]===playerTurn && board[2][2]=== playerTurn)) {
+    return true
+  }
 }
 
 function verticalWin() {
-  // Your code here
+  if ((board[0][0]=== playerTurn && board[1][0] ===playerTurn && board[2][0]=== playerTurn) ||
+    (board[0][1]=== playerTurn && board[1][1]=== playerTurn && board[2][1]===playerTurn) ||
+    (board[0][2]=== playerTurn && board[1][2]=== playerTurn && board[2][2])===playerTurn) {
+      return true
+    }
 }
 
 function diagonalWin() {
-  // Your code here
+  if ((board[0][0]=== playerTurn && board[1][1] === playerTurn && board [2][2]=== playerTurn) ||
+    (board[2][0] === playerTurn && board[1][1 === playerTurn] && board[0][2] === playerTurn)){
+      return true
+    }
 }
 
 function checkForWin() {
-  // Your code here
+  if (horizontalWin() || verticalWin() || diagonalWin()) {
+    return true
+  } else {
+    console.log("it's a tie")
+  }
 }
 
-function ticTacToe(row, column) {
-  // Your code here
+//sitch turns
+function switchPlayer () {
+  if (playerTurn === 'X') {
+    playerTurn = 'O'
+  } else {
+    playerTurn = 'X'
+  }
 }
+
+
+function ticTacToe(row,column) {
+  // Your code here
+  if(validate(row,column)) {
+    if (emptySpace(row,column)) {
+      board[row][column] = playerTurn;
+      switchPlayer();
+    }  else { 
+      console.log("game over")
+    }
+  }
+}
+
+
+//validate input
+function validate (row, column) {
+  if ( (row==0 )|| (row ==1 )||( row == 2)) {
+    if ( (column==0 )|| (column ==1 )||( column == 2)) {
+      return true
+      } else { 
+        console.log("invalid move")
+    } 
+  }
+}
+//check empty space
+function emptySpace(row,column) {
+  if (board[row][column] === ' ') {
+    return true
+  }
+}
+
+
 
 function getPrompt() {
   printBoard();
