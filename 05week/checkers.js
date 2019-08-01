@@ -13,11 +13,11 @@ class Checker {
   constructor(color) { 
     if (color==='red'){
       this.color = color;
-      this.symbol = 'r';
+      this.symbol = '❤';
     } else 
     if(color==='black') {
       this.color = color;
-      this.symbol = 'b';
+      this.symbol = '✠';
     }
   }
 }
@@ -40,7 +40,7 @@ class Board {
   constructor() { 
     this.grid = [];
     this.checkers = [];
-  
+    //this.selectChecker = selectChecker([row],[column]);
 }
   // method that creates an 8x8 array, filled with null values
   createGrid() {
@@ -103,66 +103,24 @@ class Board {
                   this.checkers.push(blackChecker);
           // Your code here
                   }
-                }
-              }
-            }
-          
-
-// isValidInput(whichPiece,toWhere) 
-// const isEmpty = () => {
-//   if (this.board.grid[toWhere[0]][toWhere[1]] === null) {
-//     return true;
-//   };
-
-// const is0to7 = () => {
-//   if (((startX || endX || startY || endY) <=7) && ((startX || endX || startY || endY) >= 0)) {
-//     return true;
-//   };
-// }
-// const isInputOdd = () => {
-//   if ((startX + startY) && (endX + endY) %2 !== 0) {
-//     return true;
-//   };
-// }
-// 
-// }
-// return is0to7 && isInputOdd(whichPiece) && isInputOdd(toWhere) && isEmpty(whichPiece) && !isEmpty(toWhere);
-// }
-
+            }  
+        }
+    }
 }
+
+
 
 class Game {
   constructor() {
-    this.board = new Board;
-  }
+    this.board = new Board;}
+   // this.moveChecker= moveChecker(start,end) ;
   start() {
     this.board.createGrid()
-    this.board.initializeGrid();
+    this.board.initializeGrid();   
   }
+}  
 
-  moveChecker(startX, endX, startY, endY) {
-    let move = null;
 
-      if (playerTurn = blackChecker) {
-         move = -1;
-      } else if 
-        (playerTurn = redChecker){
-      move = 1;
-    } else {
-      console.log('invalid move');
-  }
-     if ((endX === startX +1) || (endX === startX-1) && 
-     (endY === startY + move))
-     {
-      this.board.grid[whichPiece[0]][whichPiece[1]]=null;
-      this.board.grid[toWhere[0]][toWhere[1]]=playerTurn;
-      switchPlayer();
-     }
-     else{
-       console.log(startX, startY, endX, endY);
-     }
-}
-}
 
 function getPrompt() {
   game.board.viewGrid();
