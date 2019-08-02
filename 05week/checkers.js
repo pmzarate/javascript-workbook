@@ -105,15 +105,45 @@ class Board {
                   }
             }  
         }
+    } 
+  movedChecker(whichPiece, toWhere) {
+      let start = whichPiece.split('');
+      let end = toWhere.split('');
+      let startX = start[0];
+      let startY = start[1];
+      let endX = end[0];
+      let endY = end[1];
+  
+      const is0to7 = () => {
+        if (((startX || endX || startY || endY) <=7) && ((startX || endX || startY || endY) >= 0)) {
+          return true;
+        };
+      }
+      const isInputOdd = () => {
+        if ((startX + startY) && (endX + endY) %2 !== 0) {
+          return true;
+        };
+      }
+      const isEmpty = () => {
+        if (this.board.grid[endX][endY] === null) {
+          return true;
+        };
+      }
+      return is0to7 && isInputOdd(whichPiece) && isInputOdd(toWhere) && isEmpty(whichPiece) && !isEmpty(toWhere);
     }
-}
+
+  }
+  //;
+  // killChecker() {
+
+  // };
+
 
 
 
 class Game {
   constructor() {
     this.board = new Board;}
-   // this.moveChecker= moveChecker(start,end) ;
   start() {
     this.board.createGrid()
     this.board.initializeGrid();   
