@@ -106,9 +106,9 @@ class Board {
             }  
         }
     } 
-  movedChecker(whichPiece, toWhere) {
-      let start = whichPiece.split('');
-      let end = toWhere.split('');
+  moveChecker(whichPiece, toWhere) {
+      let start = whichPiece.split(' ');
+      let end = toWhere.split(' ');
       let startX = start[0];
       let startY = start[1];
       let endX = end[0];
@@ -143,14 +143,14 @@ class Board {
 
 class Game {
   constructor() {
-    this.board = new Board;}
-  start() {
-    this.board.createGrid()
-    this.board.initializeGrid();   
+    this.board = new Board;
   }
-}  
-
-
+  start() {
+    this.board.createGrid();
+    this.board.initializeGrid(); 
+    this.board.moveChecker();
+  }
+}
 
 function getPrompt() {
   game.board.viewGrid();
