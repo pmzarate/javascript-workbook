@@ -1,0 +1,38 @@
+body {
+    background: gold, silver black;
+    opacity: 0.5%;
+	background: linear-gradient(
+        silver,
+        rgb(236,153,44),
+        black
+    	)
+		no-repeat;
+	background-size: 100%;
+	background-position: center;
+    color: black;
+    width:1200px;
+    height: 1000px;
+}
+
+header { 
+    background-color: pink;
+    height: 450px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+}
+
+header > h1{
+    font-size: 120px;
+    font-family: 'Freckle Face', cursive;
+    align-items: center;
+    text-align: center;
+}
+
+player {
+    background-color:lightgreen;
+    display: flex;
+    justify-content: center;
+    block-size: 150px;
+}

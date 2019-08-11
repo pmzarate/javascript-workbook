@@ -1,0 +1,3 @@
+whiteboard.txt
+
+connect the question button from html to getquestion() and bring 1 question 

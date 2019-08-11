@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Freckle+Face&display=swap" rel="stylesheet">
+    <link href="/1stAPIproject/1stAPIproject.css" rel="stylesheet"  >
+    <title>Smart Ass</title>
+</head>
+<body>
+    <header>
+        	<img src="/1stAPIproject/smart_ass_coffee_icon.png" id="ass" alt="smart_ass_coffee_icon" width="400px" height="400px"/>
+        <h1>Who's the REAL<br> Smart Ass?</h1>
+    </header>
+    <div class="playerBox">
+        <form name="player" action="/    action_page.php" method="get">
+            <input type="button" onclick="formSubmit()" value="Add A Player">
+            <input type="text" name="playerName">
+        </form>
+    </div>
+    <div id="questionBox">
+        <button onclick="getQuestion()"> Get A Question </button>
+        
+    </div>
+    <div class="answerBox">
+        <ul id="answers"></ul>
+    </div>
+</body>
+  <script src="/1stAPIproject/1stAPIproject.js"></script>
+</html>
