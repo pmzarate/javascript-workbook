@@ -10,7 +10,6 @@ body {
 	background-size: 100%;
 	background-position: center;
     color: black;
-    width:1200px;
     height: 1000px;
 }
 
@@ -23,16 +22,30 @@ header {
     width: auto;
 }
 
-header > h1{
-    font-size: 120px;
+header > h1 {
+    font-size: 150px;
     font-family: 'Freckle Face', cursive;
     align-items: center;
     text-align: center;
 }
 
-player {
-    background-color:lightgreen;
+.game {
     display: flex;
+    flex-direction: row;
+}
+#playerBox {
+    background-color:lightgreen;
     justify-content: center;
-    block-size: 150px;
+    height: 300px;
+    /* width: 500px; */
+}
+
+#questionBox {
+    background-color: lightgoldenrodyellow;
+    height:300px;
+}
+
+#questionBox.answerBox {
+    background-color: lightgrey;
+    height: 300px;
 }

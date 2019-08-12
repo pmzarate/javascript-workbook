@@ -1,5 +1,10 @@
 'use strict'
 
+// add players to game
+
+const playerOneCount = "";
+const playerTwoCount = "";
+
 
 //when clickedf from HTML-  will fetch question from api and offer to player in question box
 function getQuestion() {
@@ -14,6 +19,10 @@ function getQuestion() {
             let questionBox = document.getElementById('questionBox');
             const asked = document.createElement('div');
             asked.innerText = data.results[0].question;
+            questionBox.style.fontSize= "30px";
+            questionBox.style.textAlign="center";
+            questionBox.style.alignItems="center";
+            questionBox.style.maxWidth="500px";
             questionBox.append(asked);
             console.log(data.results[0].question)
 
@@ -28,25 +37,28 @@ function getQuestion() {
             allAnswers.push(correct_answer)
             console.log(allAnswers);
 
-            // var listing = allAnswers.map(function(answer) {
-            // let AnswerList = document.createElement('listItem');
-            // AnswerList.innerHTML = answer;
-            // return AnswerList;
-            // })
-            
+            let shuffled = allAnswers
+                .map((a)=> ({sort: Math.random(),value:a}))
+                .sort((a,b) => a.sort - b.sort)
+                .map((a)=>a.value)
+                console.log(shuffled)
+
             let answerBox = document.getElementById('answers');
+           // document.write(unescape(allAnswers));
             answerBox.append(allAnswers);
-            
+            answerBox.style.fontSize= "30px";
+            answerBox.style.textAlign="center";
+            answerBox.style.alignItems="center";
+            answerBox.style.maxWidth="500px";
         })
     }
 // const player = document.getElementsByClassName('player')
 
 //     document.forms["player"].submit();
 // }
-// document.getElementById('getQuestion').addEventListener('click',getQuestion)
 
-// const playerOneCount = [];
-// const palyerTwoCount = [];
+
+
 
 
 //question T/F https://opentdb.com/api.php?amount=1&category=9&difficulty=medium&type=boolean
@@ -54,3 +66,9 @@ function getQuestion() {
 //    https://opentdb.com/api.php?amount=30&category=9&difficulty=easy&type=multiple
 
 
+ // var listing = allAnswers.map(function(answer) {
+            // let AnswerList = document.createElement('listItem');
+            // AnswerList.innerHTML = answer;
+            // return AnswerList;
+            // })
+            

@@ -11,21 +11,22 @@
 <body>
     <header>
         	<img src="/1stAPIproject/smart_ass_coffee_icon.png" id="ass" alt="smart_ass_coffee_icon" width="400px" height="400px"/>
-        <h1>Who's the REAL<br> Smart Ass?</h1>
+        <h1> Who's the <br> Smartest?</h1>
     </header>
-    <div class="playerBox">
-        <form name="player" action="/    action_page.php" method="get">
-            <input type="button" onclick="formSubmit()" value="Add A Player">
-            <input type="text" name="playerName">
-        </form>
-    </div>
-    <div id="questionBox">
-        <button onclick="getQuestion()"> Get A Question </button>
-        
-    </div>
-    <div class="answerBox">
-        <ul id="answers"></ul>
-    </div>
+    <div class= "game">
+        <div id="playerBox">
+            <form name="player" action="/    action_page.php" method="get">
+            <input type="button" onclick="formSubmit()" value="Add A Player" style= "height: 60px; width:220px; font-size: 30px" ><br/>
+            <input type="text"  name="playerName">
+            </form>
+        </div>
+            <div id="questionBox">
+                <button onclick="getQuestion()" style= "height: 60px; width: 400px; font-size: 30px;";> Get A Question </button> <br/>
+            </div>
+                <div class="answerBox">
+                    <ul id="answers"></ul>
+                </div>
+    </div>            
 </body>
-  <script src="/1stAPIproject/1stAPIproject.js"></script>
+        <script src="/1stAPIproject/1stAPIproject.js"></script>
 </html>
