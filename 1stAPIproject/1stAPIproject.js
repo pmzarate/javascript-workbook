@@ -2,8 +2,8 @@
 
 // add players to game
 
-const playerOneCount = "";
-const playerTwoCount = "";
+// const player = "";
+// document.getElementById('player')
 
 
 //when clickedf from HTML-  will fetch question from api and offer to player in question box
@@ -35,6 +35,7 @@ function getQuestion() {
             
             let allAnswers = incorrect_answers;
             allAnswers.push(correct_answer)
+            
             console.log(allAnswers);
 
             let shuffled = allAnswers

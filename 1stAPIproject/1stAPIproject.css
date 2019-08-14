@@ -14,7 +14,7 @@ body {
 }
 
 header { 
-    background-color: pink;
+    /* background-color: pink; */
     height: 450px;
     display: flex;
     justify-content: space-evenly;
@@ -34,18 +34,18 @@ header > h1 {
     flex-direction: row;
 }
 #playerBox {
-    background-color:lightgreen;
+    /* background-color:lightgreen; */
     justify-content: center;
     height: 300px;
     /* width: 500px; */
 }
 
 #questionBox {
-    background-color: lightgoldenrodyellow;
+    /* background-color: lightgoldenrodyellow; */
     height:300px;
 }
 
 #questionBox.answerBox {
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
     height: 300px;
 }
