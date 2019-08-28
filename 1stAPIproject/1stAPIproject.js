@@ -17,8 +17,10 @@ function getQuestion() {
         .then((data)=> {
             console.log(data)
             let questionBox = document.getElementById('questionBox');
+            
             const asked = document.createElement('div');
             asked.innerText = data.results[0].question;
+            
             questionBox.style.fontSize= "30px";
             questionBox.style.textAlign="center";
             questionBox.style.alignItems="center";
