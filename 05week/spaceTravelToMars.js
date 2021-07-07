@@ -9,6 +9,38 @@ let jobTypes = {
   programmer: 'Any Ship!'
 };
 
+class CrewMember {
+  constructor (name, job, specialSkill, ship) {
+    this.name = name;
+    this.job = job;
+    this.specialSkill = specialSkill;
+    this.ship = ship;
+  }
+  enterShip(ship) {
+    this.ship = ship;
+    ship.crew.push(this)
+  }
+}
+class Ship {
+  constructor (name, type, ability, crew) {
+    this.name = name;
+    this.type = type;
+    this.ability = ability;
+    this.crew = [];
+  }
+  missionStatement(crew) {
+    if (this.crew.length > 0) {
+      return (this.ability)
+    }  return "Can't perform a mission yet."
+  }
+}
+
+let crewMember1 = new CrewMember('Rick Martinez', 'pilot', 'chemistry');
+//console.log(crewMember1);
+let crewMember2 = new CrewMember('Commander Lewis', 'commander', 'geology');
+//console.log(crewMember2);
+let mav = new Ship('Mars Ascent Vehicle', 'MAV', 'Ascend into low orbit');
+let hermes = new Ship('Hermes', 'Main Ship', 'Interplanetary Space Travel');
 // Your code here
 
 //tests
@@ -57,3 +89,4 @@ if (typeof describe === 'function'){
     });
   });
 }
+
